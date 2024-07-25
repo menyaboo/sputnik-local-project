@@ -2,32 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* fonts */
+@font-face {
+    font-family: 'BOWLER';
+    src: url('../../public/font/BOWLER.woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* base */
+@layer base {
+    body {
+        @apply bg-bg-light dark:bg-bg-dark text-secondary-light dark:text-secondary-dark px-[27px] py-[24px];
+    }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-normal;
+        @apply text-primary-light dark:text-primary-dark;
+    }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    h1 {
+        @apply text-[64px];
+        font-family: 'BOWLER', serif;
+    }
+
+    h2 {
+        @apply text-2xl;
+    }
+
+    h3 {
+        @apply text-xl;
+    }
 }
