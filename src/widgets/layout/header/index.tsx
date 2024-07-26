@@ -5,7 +5,7 @@ import {headerLinks} from "@/shared/data/links/header";
 
 const HeaderLayout = () => (
     <header className='flex mx-auto max-w-[1290px] justify-between items-center'>
-        <LogoComponent/>
+        <LogoComponent />
         <nav className="flex items-center gap-x-8">
             <ul className='flex gap-x-8'>
                 {

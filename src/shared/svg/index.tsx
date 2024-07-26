@@ -1,6 +1,6 @@
 import {cloneElement, FC, ReactElement, SVGProps} from "react";
 import {IIconName} from "@/shared/interface/icon";
-import {IconLogo, IconMoon, IconSun} from "@/shared/svg/ui";
+import {IconLogo, IconMoon, IconSun, IconTriangleRounded} from "@/shared/svg/ui";
 
 interface IIconProps extends SVGProps<SVGSVGElement> {
     name: IIconName
@@ -11,7 +11,8 @@ interface IIconProps extends SVGProps<SVGSVGElement> {
 const icons: { [key in IIconName]: ReactElement } = {
     logo: <IconLogo/>,
     sun: <IconSun />,
-    moon: <IconMoon />
+    moon: <IconMoon />,
+    "triangle-rounded": <IconTriangleRounded />,
 }
 
 const Icon: FC<IIconProps> = ({ name, ...props }) =>

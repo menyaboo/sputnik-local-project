@@ -1,20 +1,12 @@
-'use client'
-
 import Icon from "@/shared/svg";
 import Link from "next/link";
-import {useResolvedTheme} from "@/shared/hooks/theme";
 import {ERouterLinks} from "@/shared/enum/router";
+import {AnchorHTMLAttributes, FC} from "react";
 
-const LogoComponent = () => {
-    const {resolvedTheme} = useResolvedTheme()
-
-    return (
-        <Link href={ERouterLinks.HOME}>
-            {resolvedTheme === "light" ?
-                <Icon fill="#000" name='logo'/> :
-                <Icon fill="#fff" name='logo'/>}
-        </Link>
-    );
-}
+const LogoComponent: FC<Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href">> = ({...props}) => (
+  <Link href={ERouterLinks.HOME} {...props}>
+    <Icon className="fill-[#000] dark:fill-[#fff]" name='logo'/>
+  </Link>
+);
 
 export default LogoComponent;
