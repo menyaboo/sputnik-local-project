@@ -1,8 +1,8 @@
 'use client'
 
 import {FC, HTMLAttributes} from "react";
-import Icon from "@/shared/svg";
 import {useResolvedTheme} from "@/shared/hook/theme";
+import Icon from "@/shared/ui/icon";
 
 const SwitcherTheme: FC<HTMLAttributes<HTMLButtonElement>> = ({...props}) => {
     const {resolvedTheme, mounted, handleSwitch} = useResolvedTheme()

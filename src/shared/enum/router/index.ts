@@ -4,7 +4,8 @@ enum ERouterLinks {
     CAREER = "/career",
     NEWS = "/news",
     REVIEWS = "/reviews",
-    CONTACTS = "/contacts"
+    CONTACTS = "/contacts",
+    TEST = "/test",
 }
 
 export {

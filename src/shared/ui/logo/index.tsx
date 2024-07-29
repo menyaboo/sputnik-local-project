@@ -1,4 +1,4 @@
-import Icon from "@/shared/svg";
+import Icon from "@/shared/ui/icon";
 import Link from "next/link";
 import {ERouterLinks} from "@/shared/enum/router";
 import {AnchorHTMLAttributes, FC} from "react";

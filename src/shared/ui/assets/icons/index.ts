@@ -1,0 +1,6 @@
+export * from './star'
+export * from './moon'
+export * from './sun'
+export * from './mail'
+export * from './phone'
+export * from './triangle-rounded'

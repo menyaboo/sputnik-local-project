@@ -1,8 +1,19 @@
 import {FC, HTMLAttributes} from "react";
+import {makeClassname} from "@/shared/utils/make-html-classname";
+import styles from './style.module.scss';
+import Link from "next/link";
 
-const Button: FC<HTMLAttributes<HTMLButtonElement>> = ({className = "", ...props}) => (
-    <button className={`bg-accent rounded-[16px] font-semibold text-primary-dark px-[32px] py-[16px] ${className}`} {...props}/>
+interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
+    href?: string;
+}
+
+const ButtonComponent: FC<Omit<IButtonProps, 'href'>> = ({className = "", ...props}) => (
+    <button className={makeClassname(styles.btn, className)} {...props}/>
 );
+
+const Button: FC<IButtonProps> = ({href, ...props}) => (
+    href ? <Link href={href}><ButtonComponent {...props}/></Link> : <ButtonComponent {...props}/>
+)
 
 export {
     Button

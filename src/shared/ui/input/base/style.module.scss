@@ -1,0 +1,29 @@
+.inp {
+  @apply outline-accent w-full relative;
+
+  span {
+    @apply my-1 block;
+  }
+
+  > label > input {
+    @apply bg-transparent border-0 w-full;
+
+    outline: 1px solid;
+    padding: 10px 16px;
+  }
+
+  &.error {
+    > span {
+      @apply text-red-500 mt-1;
+    }
+  }
+
+  // доработать
+  &.req > label > input[type="text"]::-webkit-input-placeholder::after {
+    @apply text-red-500 ml-1;
+    content: "*";
+  }
+}
+
+
+

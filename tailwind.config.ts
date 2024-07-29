@@ -5,25 +5,38 @@ const config: Config = {
     './src/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
-    extend: {},
-    colors: {
-      accent: "#009bfd",
-      bg: {
-        secondary: {
-          light: "#f3f3f5",
-          dark: "#151515"
+    extend: {
+      colors: {
+        accent: "#009bfd",
+        light: {
+          background: {
+            DEFAULT: "#F5F5F7",
+            primary: "#FFFFFF",
+            secondary: "#E9E9E9",
+          },
+          text: {
+            DEFAULT: "#000000",
+            secondary: "#686868",
+          },
+          outline: {
+            DEFAULT: "#D4D4D4",
+          }
         },
-        light: "#fdfdfd",
-        dark: "#222222"
+        dark: {
+          background: {
+            DEFAULT: "#222222",
+            primary: "#151515",
+            secondary: "#2B2B2B",
+          },
+          text: {
+            DEFAULT: "#FFFFFF",
+            secondary: "#CCCCCC",
+          },
+          outline: {
+            DEFAULT: "#3B3B3B",
+          }
+        },
       },
-      primary: {
-        light: "#151515",
-        dark: "#fdfdfd"
-      },
-      secondary: {
-        light: "#686868",
-        dark: "#cacaca"
-      }
     },
     fontFamily: {
       sans: ["Inter", "sans-serif"],
@@ -56,4 +69,5 @@ const config: Config = {
   plugins: [],
   darkMode: "class",
 };
+
 export default config;

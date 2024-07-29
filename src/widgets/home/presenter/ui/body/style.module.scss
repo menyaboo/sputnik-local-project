@@ -1,0 +1,13 @@
+.content {
+  @apply flex max-w-[1120px] flex-col gap-[36px] pt-[80px] pb-[130px];
+
+  > div {
+    @apply flex items-center gap-[8px];
+
+    > span {@apply font-semibold}
+  }
+}
+
+.tagList {
+  @apply flex gap-[32px] uppercase;
+}

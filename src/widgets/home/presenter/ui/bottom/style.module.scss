@@ -1,0 +1,26 @@
+.bottomPresenter {
+  @apply flex h-[142px] w-full justify-end;
+
+  div:first-child {
+    @apply z-[-1] absolute h-[142px] bottom-0 rounded-tr-[32px] left-0 w-[818px];
+
+    svg {
+      @apply absolute;
+
+      &:first-child {@apply top-[-32px]}
+      &:last-child {@apply bottom-0 right-[-32px]}
+    }
+  }
+
+  div:last-child {
+    @apply w-[440px] pt-[37px];
+
+    > span {
+      @apply text-accent uppercase text-[12px]
+    }
+
+    > p {
+      @apply leading-[22.4px]
+    }
+  }
+}

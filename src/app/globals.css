@@ -2,23 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* fonts */
 @font-face {
     font-family: 'BOWLER';
-    src: url('../../public/font/BOWLER.woff2');
+    src: url('../../public/fonts/BOWLER.woff2');
     font-weight: normal;
     font-style: normal;
 }
 
-/* base */
 @layer base {
     body {
-        @apply bg-bg-light dark:bg-bg-dark text-secondary-light dark:text-secondary-dark px-[27px] py-[24px];
+        @apply bg-light-background dark:bg-dark-background
+        text-light-text dark:text-dark-text px-[27px] py-[24px];
     }
 
     h1, h2, h3, h4, h5, h6 {
         @apply font-normal;
-        @apply text-primary-light dark:text-primary-dark;
+        @apply text-light-text dark:text-dark-text;
     }
 
     h1 {
@@ -27,10 +26,15 @@
     }
 
     h2 {
-        @apply text-2xl;
+        @apply text-[36px];
+        font-family: 'BOWLER', serif;
     }
 
     h3 {
-        @apply text-xl;
+        @apply text-[32px];
+    }
+
+    h4 {
+        @apply text-[24px];
     }
 }

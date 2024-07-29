@@ -1,7 +1,7 @@
 import Link from "next/link";
 import LogoComponent from "../../../shared/ui/logo";
 import SwitcherTheme from "../../../features/theme/swither-theme";
-import {headerLinks} from "@/shared/data/links/header";
+import {headerLinks} from "@/shared/static/links/header";
 
 const HeaderLayout = () => (
     <header className='flex mx-auto max-w-[1290px] justify-between items-center'>

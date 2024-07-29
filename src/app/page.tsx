@@ -1,5 +1,9 @@
-import HomePage from "@/pages/home";
+import {PresenterWidget} from "@/widgets/home/presenter";
 
-const Home = () => <HomePage/>
+const Home = () => (
+    <main>
+        <PresenterWidget/>
+    </main>
+)
 
 export default Home
